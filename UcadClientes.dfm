@@ -23,10 +23,6 @@ inherited FCadCliente: TFCadCliente
     ExplicitLeft = 16
     ExplicitTop = 47
     inherited TabSheet1: TTabSheet
-      ExplicitLeft = 8
-      ExplicitTop = 24
-      ExplicitWidth = 737
-      ExplicitHeight = 349
       object Label1: TLabel
         Left = 25
         Top = 45
@@ -66,21 +62,21 @@ inherited FCadCliente: TFCadCliente
         Font.Style = []
         ParentFont = False
       end
-      object TDBEdit
+      object dbeditnomeclie: TDBEdit
         Left = 25
         Top = 78
         Width = 664
         Height = 21
         TabOrder = 0
       end
-      object TDBEdit
+      object dbeditcnpj: TDBEdit
         Left = 25
         Top = 190
         Width = 296
         Height = 21
         TabOrder = 1
       end
-      object TDBEdit
+      object dbedittel: TDBEdit
         Left = 25
         Top = 286
         Width = 296
@@ -108,6 +104,10 @@ inherited FCadCliente: TFCadCliente
     object TabSheet2: TTabSheet
       Caption = 'Endere'#231'o'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label4: TLabel
         Left = 33
         Top = 26
@@ -236,6 +236,9 @@ inherited FCadCliente: TFCadCliente
       Caption = 'Observa'#231#245'es'
       ImageIndex = 2
       ExplicitLeft = 8
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label5: TLabel
         Left = 3
         Top = 3

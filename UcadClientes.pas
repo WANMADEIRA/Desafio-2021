@@ -25,6 +25,9 @@ type
     Label9: TLabel;
     Label10: TLabel;
     JvCalcEdit2: TJvCalcEdit;
+    dbeditnomeclie: TDBEdit;
+    dbeditcnpj: TDBEdit;
+    dbedittel: TDBEdit;
 
 
     procedure DSStateChange(Sender: TObject);

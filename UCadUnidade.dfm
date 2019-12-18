@@ -9,9 +9,12 @@ inherited FCadUnidade: TFCadUnidade
   inherited Image1: TImage
     Width = 780
     Height = 332
+    ExplicitWidth = 780
+    ExplicitHeight = 332
   end
   inherited PanelPai: TPanel
     Width = 780
+    ExplicitWidth = 780
     inherited Anterior: TButton
       Left = 651
       ExplicitLeft = 651
@@ -35,7 +38,6 @@ inherited FCadUnidade: TFCadUnidade
     ExplicitWidth = 601
     ExplicitHeight = 305
     inherited TabSheet1: TTabSheet
-      ExplicitLeft = 8
       ExplicitWidth = 593
       ExplicitHeight = 277
       object Unidade: TLabel
@@ -64,18 +66,22 @@ inherited FCadUnidade: TFCadUnidade
         Font.Style = []
         ParentFont = False
       end
-      object TDBEdit
+      object dbeditun: TDBEdit
         Left = 16
         Top = 71
         Width = 553
         Height = 21
+        DataField = 'NOME_UNIDADE'
+        DataSource = DS
         TabOrder = 0
       end
-      object TDBEdit
+      object dbabreu: TDBEdit
         Left = 16
         Top = 151
         Width = 185
         Height = 21
+        DataField = 'ABREV_UNIDADE'
+        DataSource = DS
         TabOrder = 1
       end
     end

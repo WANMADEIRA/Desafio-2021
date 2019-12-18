@@ -12,6 +12,8 @@ type
   TFCadUnidade = class(TFPaiCadastro)
     Unidade: TLabel;
     Abrev_Uni: TLabel;
+    dbeditun: TDBEdit;
+    dbabreu: TDBEdit;
   private
     { Private declarations }
   public
