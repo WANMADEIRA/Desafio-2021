@@ -9,20 +9,20 @@
     <Transaction>2021/05/13 00:25:15.000.952,D:\Desafio Delphi 2021\Unit1.dfm=D:\Desafio Delphi 2021\UDMConexao.dfm</Transaction>
     <Transaction>2021/05/13 00:25:15.000.952,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UDMConexao.pas</Transaction>
     <Transaction>2021/05/13 00:49:11.000.924,=D:\Desafio Delphi 2021\Unit1.pas</Transaction>
-    <Transaction>2021/05/13 01:27:42.000.806,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UPaiCadastro.pas</Transaction>
     <Transaction>2021/05/13 01:27:42.000.806,D:\Desafio Delphi 2021\Unit1.dfm=D:\Desafio Delphi 2021\UPaiCadastro.dfm</Transaction>
+    <Transaction>2021/05/13 01:27:42.000.806,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UPaiCadastro.pas</Transaction>
     <Transaction>2021/05/13 23:50:12.000.876,=D:\Desafio Delphi 2021\Unit1.pas</Transaction>
-    <Transaction>2021/05/13 23:55:15.000.606,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UcadAluno.pas</Transaction>
     <Transaction>2021/05/13 23:55:15.000.606,D:\Desafio Delphi 2021\Unit1.dfm=D:\Desafio Delphi 2021\UcadAluno.dfm</Transaction>
+    <Transaction>2021/05/13 23:55:15.000.606,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UcadAluno.pas</Transaction>
     <Transaction>2021/05/14 00:18:55.000.477,=D:\Desafio Delphi 2021\Unit2.pas</Transaction>
-    <Transaction>2021/05/14 00:20:57.000.664,D:\Desafio Delphi 2021\Unit2.dfm=D:\Desafio Delphi 2021\UCadCidade.dfm</Transaction>
     <Transaction>2021/05/14 00:20:57.000.663,D:\Desafio Delphi 2021\Unit2.pas=D:\Desafio Delphi 2021\UCadCidade.pas</Transaction>
+    <Transaction>2021/05/14 00:20:57.000.664,D:\Desafio Delphi 2021\Unit2.dfm=D:\Desafio Delphi 2021\UCadCidade.dfm</Transaction>
     <Transaction>2021/05/14 00:21:21.000.001,=D:\Desafio Delphi 2021\Unit3.pas</Transaction>
-    <Transaction>2021/05/14 00:22:30.000.121,D:\Desafio Delphi 2021\Unit3.dfm=D:\Desafio Delphi 2021\UcadProduto.dfm</Transaction>
     <Transaction>2021/05/14 00:22:30.000.121,D:\Desafio Delphi 2021\Unit3.pas=D:\Desafio Delphi 2021\UcadProduto.pas</Transaction>
+    <Transaction>2021/05/14 00:22:30.000.121,D:\Desafio Delphi 2021\Unit3.dfm=D:\Desafio Delphi 2021\UcadProduto.dfm</Transaction>
     <Transaction>2021/05/14 00:24:52.000.291,=D:\Desafio Delphi 2021\Unit1.pas</Transaction>
-    <Transaction>2021/05/14 00:26:54.000.111,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UcadPedido.pas</Transaction>
     <Transaction>2021/05/14 00:26:54.000.111,D:\Desafio Delphi 2021\Unit1.dfm=D:\Desafio Delphi 2021\UcadPedido.dfm</Transaction>
+    <Transaction>2021/05/14 00:26:54.000.111,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UcadPedido.pas</Transaction>
     <Transaction>2021/05/14 00:32:08.000.630,D:\Desafio Delphi 2021\UcadAluno.dfm=D:\Desafio Delphi 2021\UcadClientes.dfm</Transaction>
     <Transaction>2021/05/14 00:32:08.000.630,D:\Desafio Delphi 2021\UcadAluno.pas=D:\Desafio Delphi 2021\UcadClientes.pas</Transaction>
     <Transaction>2021/05/14 00:39:36.000.902,=D:\Desafio Delphi 2021\Unit1.pas</Transaction>
@@ -33,10 +33,15 @@
     <Transaction>2021/05/14 22:45:55.000.941,D:\Desafio Delphi 2021\UCadPesquisa.pas=D:\Desafio Delphi 2021\Unit1.pas</Transaction>
     <Transaction>2021/05/14 22:45:55.000.941,D:\Desafio Delphi 2021\UCadPesquisa.dfm=D:\Desafio Delphi 2021\Unit1.dfm</Transaction>
     <Transaction>2021/05/16 00:58:56.000.982,=D:\Desafio Delphi 2021\Unit1.pas</Transaction>
-    <Transaction>2021/05/16 00:59:28.000.163,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UDMPaiCadastro.pas</Transaction>
     <Transaction>2021/05/16 00:59:28.000.163,D:\Desafio Delphi 2021\Unit1.dfm=D:\Desafio Delphi 2021\UDMPaiCadastro.dfm</Transaction>
+    <Transaction>2021/05/16 00:59:28.000.163,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\UDMPaiCadastro.pas</Transaction>
+    <Transaction>2021/05/18 18:35:05.000.720,=D:\Desafio Delphi 2021\Unit1.pas</Transaction>
+    <Transaction>2021/05/18 18:35:18.000.904,D:\Desafio Delphi 2021\Unit1.pas=D:\Desafio Delphi 2021\ClassPaiCadastro.pas</Transaction>
+    <Transaction>2021/05/18 18:35:36.000.808,D:\Desafio Delphi 2021\ClassPaiCadastro.pas=D:\Desafio Delphi 2021\Classes\UClassPaiCadastro.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Classes"/>
+    <File Path="Classes\UClassPaiCadastro.pas"/>
     <File Path="UCadPrincipal.pas"/>
     <File Path="UCadPrincipal.dfm"/>
     <File Path="UcadClientes.pas"/>

@@ -13,7 +13,8 @@ uses
   UcadPedido in 'UcadPedido.pas' {FCadPedidos},
   UCadUnidade in 'UCadUnidade.pas' {FCadUnidade},
   UCadPesquisa in 'UCadPesquisa.pas' {FConsulta},
-  UDMPaiCadastro in 'UDMPaiCadastro.pas' {DMPaiCadastro: TDataModule};
+  UDMPaiCadastro in 'UDMPaiCadastro.pas' {DMPaiCadastro: TDataModule},
+  UClassPaiCadastro in 'Classes\UClassPaiCadastro.pas';
 
 {$R *.res}
 

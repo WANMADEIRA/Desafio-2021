@@ -4,7 +4,7 @@ interface
 
 uses
   System.SysUtils, System.Classes, Data.FMTBcd, Data.SqlExpr, Datasnap.Provider,
-  Data.DB, Datasnap.DBClient;
+  Data.DB, Datasnap.DBClient, UClassPaiCadastro;
 
 type
   TDMPaiCadastro = class(TDataModule)
@@ -14,7 +14,7 @@ type
   private
    FcodigoAtual: Integer;
   public
-   FclassFilha: TClassPaiCadastro;
+  // FclassFilha: TClassPaiCadastro;
 
    Procedure AbrirRegistro (Codigo: Integer);
    Procedure Proximo;
@@ -39,8 +39,8 @@ implementation
 
 procedure TDMPaiCadastro.AbrirRegistro(Codigo: Integer);
 begin
- CDSCadastro.Close
- SQLDS.CommandText:= FclassFilha.SqlCadastro;
+ CDSCadastro.Close;
+ //SQLDS.CommandText:= FclassFilha.SqlCadastro;
  CDSCadastro.Open;
 
 end;
