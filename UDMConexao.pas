@@ -11,6 +11,7 @@ type
     DSP: TDataSetProvider;
     SQLConnection: TSQLConnection;
     SQLDS: TSQLDataSet;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,6 +30,11 @@ implementation
 
 {$R *.dfm}
 { TDMConexao }
+
+procedure TDMConexao.DataModuleCreate(Sender: TObject);
+begin
+  SQLDS.SQLConnection := SQLConnection;
+end;
 
 function TDMConexao.ExecuteReader(SQL: String): Olevariant;
 begin

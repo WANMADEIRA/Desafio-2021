@@ -14,6 +14,7 @@ type
     Unidade: TLabel;
     ComboBox1: TComboBox;
     Label1: TLabel;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,5 +27,14 @@ var
 implementation
 
 {$R *.dfm}
+
+uses UDMCadCidade;
+
+procedure TFCadCidade.FormCreate(Sender: TObject);
+begin
+  DMCadastro := TDMCadCidade.Create(self);
+  inherited;
+
+end;
 
 end.

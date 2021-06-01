@@ -2,6 +2,7 @@ inherited FCadPedidos: TFCadPedidos
   Caption = 'Cadastro de Pedidos'
   ClientHeight = 684
   ClientWidth = 1061
+  OnCreate = FormCreate
   ExplicitWidth = 1077
   ExplicitHeight = 723
   PixelsPerInch = 96
@@ -9,10 +10,12 @@ inherited FCadPedidos: TFCadPedidos
   inherited Image1: TImage
     Width = 1061
     Height = 602
+    ExplicitWidth = 1061
+    ExplicitHeight = 602
   end
   inherited PanelPai: TPanel
     Width = 1061
-    ExplicitTop = 0
+    ExplicitWidth = 1061
     inherited Anterior: TButton
       Left = 922
       ExplicitLeft = 922
@@ -36,8 +39,10 @@ inherited FCadPedidos: TFCadPedidos
     ExplicitWidth = 857
     ExplicitHeight = 568
     inherited TabSheet1: TTabSheet
-      ExplicitWidth = 741
-      ExplicitHeight = 353
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 849
+      ExplicitHeight = 540
     end
   end
   inherited Panel2: TPanel
@@ -85,8 +90,5 @@ inherited FCadPedidos: TFCadPedidos
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitLeft = 488
-    ExplicitTop = 635
-    ExplicitWidth = 185
   end
 end

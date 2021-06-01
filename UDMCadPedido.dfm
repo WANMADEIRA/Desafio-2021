@@ -1,0 +1,2 @@
+inherited DMCadPedido: TDMCadPedido
+end

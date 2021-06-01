@@ -13,7 +13,18 @@ uses
   UcadPedido in 'UcadPedido.pas' {FCadPedidos},
   UCadUnidade in 'UCadUnidade.pas' {FCadUnidade},
   UCadPesquisa in 'UCadPesquisa.pas' {FConsulta},
-  UDMPaiCadastro in 'UDMPaiCadastro.pas' {DMPaiCadastro: TDataModule};
+  UDMPaiCadastro in 'UDMPaiCadastro.pas' {DMPaiCadastro: TDataModule},
+  UClassPaiCadastro in 'Classes\UClassPaiCadastro.pas',
+  UClassCadCidade in 'Classes\UClassCadCidade.pas',
+  UDMCadCidade in 'UDMCadCidade.pas' {DMCadCidade: TDataModule},
+  UClassCadCliente in 'Classes\UClassCadCliente.pas',
+  UClassCadUnidade in 'Classes\UClassCadUnidade.pas',
+  UClassCadProduto in 'Classes\UClassCadProduto.pas',
+  UclassCadPedido in 'Classes\UclassCadPedido.pas',
+  UDMCadUnidade in 'UDMCadUnidade.pas' {DMCadUnidade: TDataModule},
+  UDMCadProduto in 'UDMCadProduto.pas' {DMCadProduto: TDataModule},
+  UDMCadCliente in 'UDMCadCliente.pas' {DMCadCliente: TDataModule},
+  UDMCadPedido in 'UDMCadPedido.pas' {DMCadPedido: TDataModule};
 
 {$R *.res}
 

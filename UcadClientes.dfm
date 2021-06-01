@@ -2,7 +2,6 @@ inherited FCadCliente: TFCadCliente
   Caption = 'Cadastro de Clientes'
   ClientHeight = 445
   ClientWidth = 946
-  OnCreate = FormCreate
   ExplicitWidth = 962
   ExplicitHeight = 484
   PixelsPerInch = 96
@@ -67,6 +66,8 @@ inherited FCadCliente: TFCadCliente
         Top = 78
         Width = 664
         Height = 21
+        DataField = 'NOME_CLIENTE'
+        DataSource = DS
         TabOrder = 0
       end
       object dbeditcnpj: TDBEdit
@@ -74,6 +75,8 @@ inherited FCadCliente: TFCadCliente
         Top = 190
         Width = 296
         Height = 21
+        DataField = 'CNPJ_CLIENTE'
+        DataSource = DS
         TabOrder = 1
       end
       object dbedittel: TDBEdit
@@ -81,6 +84,8 @@ inherited FCadCliente: TFCadCliente
         Top = 286
         Width = 296
         Height = 21
+        DataField = 'TEL_CLIENTE'
+        DataSource = DS
         TabOrder = 2
       end
       object RadioGroup1: TRadioGroup
@@ -104,10 +109,6 @@ inherited FCadCliente: TFCadCliente
     object TabSheet2: TTabSheet
       Caption = 'Endere'#231'o'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label4: TLabel
         Left = 33
         Top = 26
@@ -235,10 +236,6 @@ inherited FCadCliente: TFCadCliente
     object TabSheet3: TTabSheet
       Caption = 'Observa'#231#245'es'
       ImageIndex = 2
-      ExplicitLeft = 8
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label5: TLabel
         Left = 3
         Top = 3

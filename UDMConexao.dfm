@@ -1,5 +1,6 @@
 object DMConexao: TDMConexao
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 299
   Width = 439
   object DSP: TDataSetProvider

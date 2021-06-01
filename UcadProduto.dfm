@@ -1,5 +1,6 @@
 inherited FCadProduto: TFCadProduto
   Caption = 'Cadastro de Produtos'
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl1: TPageControl
@@ -61,6 +62,8 @@ inherited FCadProduto: TFCadProduto
         Top = 64
         Width = 657
         Height = 21
+        DataField = 'NOME_PRODUTO'
+        DataSource = DS
         TabOrder = 0
       end
       object CBOXunidade: TComboBox
@@ -86,5 +89,18 @@ inherited FCadProduto: TFCadProduto
         TabOrder = 3
       end
     end
+  end
+  object DBGrid1: TDBGrid [4]
+    Left = 216
+    Top = 184
+    Width = 513
+    Height = 141
+    DataSource = DS
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
   end
 end

@@ -12,6 +12,7 @@ object FPaiCadastro: TFPaiCadastro
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -3087,7 +3088,7 @@ object FPaiCadastro: TFPaiCadastro
       Height = 13
       Caption = 'C'#243'digo....:'
     end
-    object JvCalcEdit1: TJvCalcEdit
+    object EditCodigo: TJvCalcEdit
       Left = 73
       Top = 11
       Width = 121
@@ -3103,6 +3104,7 @@ object FPaiCadastro: TFPaiCadastro
       Height = 33
       Caption = '<'
       TabOrder = 1
+      OnClick = AnteriorClick
     end
     object Proximo: TButton
       Left = 855
@@ -3111,6 +3113,7 @@ object FPaiCadastro: TFPaiCadastro
       Height = 33
       Caption = '>'
       TabOrder = 2
+      OnClick = ProximoClick
     end
     object Ultimo: TButton
       Left = 899
@@ -3119,6 +3122,7 @@ object FPaiCadastro: TFPaiCadastro
       Height = 33
       Caption = '>>'
       TabOrder = 3
+      OnClick = UltimoClick
     end
     object Primeiro: TButton
       Left = 767
@@ -3127,6 +3131,7 @@ object FPaiCadastro: TFPaiCadastro
       Height = 33
       Caption = '<<'
       TabOrder = 4
+      OnClick = PrimeiroClick
     end
   end
   object PageControl1: TPageControl
@@ -3162,6 +3167,7 @@ object FPaiCadastro: TFPaiCadastro
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      OnClick = IncluirClick
     end
     object Gravar: TButton
       Left = 21
@@ -3176,6 +3182,7 @@ object FPaiCadastro: TFPaiCadastro
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      OnClick = GravarClick
     end
     object Cancelar: TButton
       Left = 21
@@ -3190,6 +3197,7 @@ object FPaiCadastro: TFPaiCadastro
       Font.Style = []
       ParentFont = False
       TabOrder = 2
+      OnClick = CancelarClick
     end
     object Excluir: TButton
       Left = 21
@@ -3204,6 +3212,7 @@ object FPaiCadastro: TFPaiCadastro
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnClick = ExcluirClick
     end
     object Relatorio: TButton
       Left = 21

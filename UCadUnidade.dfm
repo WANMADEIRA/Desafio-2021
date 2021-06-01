@@ -2,6 +2,7 @@ inherited FCadUnidade: TFCadUnidade
   Caption = 'Cadastro de Unidades'
   ClientHeight = 373
   ClientWidth = 780
+  OnCreate = FormCreate
   ExplicitWidth = 796
   ExplicitHeight = 412
   PixelsPerInch = 96

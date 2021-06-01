@@ -2,6 +2,7 @@ inherited FCadCidade: TFCadCidade
   Caption = 'Cadastro de Cidades'
   ClientHeight = 343
   ClientWidth = 863
+  OnCreate = FormCreate
   ExplicitWidth = 879
   ExplicitHeight = 382
   PixelsPerInch = 96
@@ -14,7 +15,7 @@ inherited FCadCidade: TFCadCidade
   end
   inherited PanelPai: TPanel
     Width = 863
-    ExplicitWidth = 867
+    ExplicitWidth = 863
     inherited Anterior: TButton
       Left = 740
       ExplicitLeft = 740
@@ -71,6 +72,8 @@ inherited FCadCidade: TFCadCidade
         Top = 80
         Width = 609
         Height = 21
+        DataField = 'NOME_CIDADE'
+        DataSource = DS
         TabOrder = 0
       end
     end

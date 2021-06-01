@@ -2494,11 +2494,10 @@ object Principal: TPrincipal
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 726
     object Label1: TLabel
-      Left = 731
-      Top = 16
-      Width = 4
+      Left = 759
+      Top = 14
+      Width = 17
       Height = 17
       Color = clBlue
       Font.Charset = DEFAULT_CHARSET

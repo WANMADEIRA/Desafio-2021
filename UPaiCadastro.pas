@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls,
   Vcl.ExtCtrls, Vcl.Imaging.jpeg, JvExExtCtrls, JvExtComponent, JvClock,
-  Vcl.Buttons, Vcl.Mask, JvExMask, JvToolEdit, JvBaseEdits, Data.DB;
+  Vcl.Buttons, Vcl.Mask, JvExMask, JvToolEdit, JvBaseEdits, Data.DB,
+  UDMPaiCadastro;
 
 type
   TFPaiCadastro = class(TForm)
@@ -21,16 +22,27 @@ type
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     DS: TDataSource;
-    JvCalcEdit1: TJvCalcEdit;
+    EditCodigo: TJvCalcEdit;
     Codigo: TLabel;
     Anterior: TButton;
     Proximo: TButton;
     Ultimo: TButton;
     Primeiro: TButton;
     procedure DSStateChange(Sender: TObject);
+    procedure ProximoClick(Sender: TObject);
+    procedure UltimoClick(Sender: TObject);
+    procedure PrimeiroClick(Sender: TObject);
+    procedure AnteriorClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure IncluirClick(Sender: TObject);
+    procedure GravarClick(Sender: TObject);
+    procedure CancelarClick(Sender: TObject);
+    procedure ExcluirClick(Sender: TObject);
   private
+
     { Private declarations }
   public
+    DMCadastro: TDmPaiCadastro;
     { Public declarations }
   end;
 
@@ -40,6 +52,13 @@ var
 implementation
 
 {$R *.dfm}
+
+
+
+procedure TFPaiCadastro.CancelarClick(Sender: TObject);
+begin
+DS.DataSet.Cancel;
+end;
 
 procedure TFPaiCadastro.DSStateChange(Sender: TObject);
  Var
@@ -54,6 +73,53 @@ begin
   PanelPai.Enabled:= not Editando;
 
 
+end;
+
+procedure TFPaiCadastro.ExcluirClick(Sender: TObject);
+begin
+DS.DataSet.Delete;
+end;
+
+procedure TFPaiCadastro.FormCreate(Sender: TObject);
+begin
+DS.DataSet:= DMCadastro.CDSCadastro;
+end;
+
+procedure TFPaiCadastro.GravarClick(Sender: TObject);
+begin
+DS.DataSet.Post;
+EditCodigo.AsInteger:= DMCadastro.CodigoAtual;
+end;
+
+procedure TFPaiCadastro.IncluirClick(Sender: TObject);
+begin
+DMCadastro.AbrirRegistro(DMCadastro.CodigoAtual);
+DS.DataSet.Insert;
+EditCodigo.AsInteger:= 0;
+end;
+
+procedure TFPaiCadastro.PrimeiroClick(Sender: TObject);
+begin
+DMCadastro.Primeiro;
+EditCodigo.AsInteger:= DMCadastro.CodigoAtual;
+end;
+
+procedure TFPaiCadastro.ProximoClick(Sender: TObject);
+begin
+DMCadastro.Proximo;
+EditCodigo.AsInteger:= DMCadastro.CodigoAtual;
+end;
+
+procedure TFPaiCadastro.AnteriorClick(Sender: TObject);
+begin
+DMCadastro.Anterior;
+EditCodigo.AsInteger:= DMCadastro.CodigoAtual;
+end;
+
+procedure TFPaiCadastro.UltimoClick(Sender: TObject);
+begin
+DMCadastro.Ultimo;
+EditCodigo.AsInteger:= DMCadastro.CodigoAtual;
 end;
 
 end.

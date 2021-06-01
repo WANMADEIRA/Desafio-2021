@@ -64,6 +64,8 @@ begin
  RadioGroup1.ItemIndex:=0;
  Label2.Caption:= 'CPF:';
 
+// DMCadastro:=
+
 end;
 
 end.

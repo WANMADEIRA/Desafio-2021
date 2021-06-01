@@ -143,6 +143,37 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="Classes\UClassPaiCadastro.pas"/>
+        <DCCReference Include="Classes\UClassCadCidade.pas"/>
+        <DCCReference Include="UDMCadCidade.pas">
+            <Form>DMCadCidade</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Classes\UClassCadCliente.pas"/>
+        <DCCReference Include="Classes\UClassCadUnidade.pas"/>
+        <DCCReference Include="Classes\UClassCadProduto.pas"/>
+        <DCCReference Include="Classes\UclassCadPedido.pas"/>
+        <DCCReference Include="UDMCadUnidade.pas">
+            <Form>DMCadUnidade</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UDMCadProduto.pas">
+            <Form>DMCadProduto</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UDMCadCliente.pas">
+            <Form>DMCadCliente</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UDMCadPedido.pas">
+            <Form>DMCadPedido</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
