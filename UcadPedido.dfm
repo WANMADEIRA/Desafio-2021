@@ -2,7 +2,6 @@ inherited FCadPedidos: TFCadPedidos
   Caption = 'Cadastro de Pedidos'
   ClientHeight = 684
   ClientWidth = 1061
-  OnCreate = FormCreate
   ExplicitWidth = 1077
   ExplicitHeight = 723
   PixelsPerInch = 96

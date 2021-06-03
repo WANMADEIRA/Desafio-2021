@@ -70,40 +70,41 @@ inherited FCadCliente: TFCadCliente
         DataSource = DS
         TabOrder = 0
       end
-      object dbeditcnpj: TDBEdit
+      object JvDBMaskEdit1: TJvDBMaskEdit
         Left = 25
-        Top = 190
-        Width = 296
-        Height = 21
-        DataField = 'CNPJ_CLIENTE'
-        DataSource = DS
-        TabOrder = 1
-      end
-      object dbedittel: TDBEdit
-        Left = 25
-        Top = 286
-        Width = 296
+        Top = 282
+        Width = 292
         Height = 21
         DataField = 'TEL_CLIENTE'
         DataSource = DS
-        TabOrder = 2
+        MaxLength = 13
+        TabOrder = 1
+        EditMask = '!\(99\)0000-0000;1;_'
       end
-      object RadioGroup1: TRadioGroup
-        Left = 383
-        Top = 161
-        Width = 178
-        Height = 145
-        Caption = 'Pessoa Fisica / Juridica'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Tahoma'
-        Font.Style = []
+      object JvDBMaskEdit2: TJvDBMaskEdit
+        Left = 25
+        Top = 190
+        Width = 287
+        Height = 21
+        DataField = 'CNPJ_CLIENTE'
+        DataSource = DS
+        MaxLength = 14
+        TabOrder = 2
+        EditMask = '000.000.000-00;1;'
+      end
+      object DBRadioGroup1: TDBRadioGroup
+        Left = 411
+        Top = 190
+        Width = 230
+        Height = 117
+        Caption = 'Tipo Pessoa'
+        DataField = 'TIPO_PESSOA'
+        DataSource = DS
         Items.Strings = (
-          'Fisica'
-          'Juridica')
-        ParentFont = False
+          'FISICA'
+          'JURIDICA')
         TabOrder = 3
+        OnChange = DBRadioGroup1Change
       end
     end
     object TabSheet2: TTabSheet
@@ -257,12 +258,13 @@ inherited FCadCliente: TFCadCliente
         Caption = 'Mostrar Observa'#231'oes'
         TabOrder = 0
       end
-      object TDBEdit
+      object mmoObs: TDBMemo
         Left = 3
         Top = 25
-        Width = 724
-        Height = 283
-        AutoSize = False
+        Width = 731
+        Height = 290
+        DataField = 'OBS_CLIENTE'
+        DataSource = DS
         TabOrder = 1
       end
     end

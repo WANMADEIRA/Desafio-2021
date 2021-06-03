@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UPaiCadastro, Data.DB, Vcl.ComCtrls,
   Vcl.StdCtrls, Vcl.Mask, JvExMask, JvToolEdit, JvBaseEdits, Vcl.ExtCtrls,
-  Vcl.Imaging.jpeg, Vcl.DBCtrls;
+  Vcl.Imaging.jpeg, Vcl.DBCtrls, UDMCadCliente, JvMaskEdit, JvDBControls;
 
 type
   TFCadCliente = class(TFPaiCadastro)
@@ -14,7 +14,6 @@ type
     Label1: TLabel;
     TabSheet3: TTabSheet;
     Mostraobservacoes: TCheckBox;
-    RadioGroup1: TRadioGroup;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -26,12 +25,16 @@ type
     Label10: TLabel;
     JvCalcEdit2: TJvCalcEdit;
     dbeditnomeclie: TDBEdit;
-    dbeditcnpj: TDBEdit;
-    dbedittel: TDBEdit;
+    JvDBMaskEdit1: TJvDBMaskEdit;
+    JvDBMaskEdit2: TJvDBMaskEdit;
+    DBRadioGroup1: TDBRadioGroup;
+    mmoObs: TDBMemo;
 
 
     procedure DSStateChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure DBRadioGroup1Change(Sender: TObject);
+    procedure mascara;
   private
     { Private declarations }
   public
@@ -48,10 +51,23 @@ implementation
 
 
 
+procedure TFCadCliente.DBRadioGroup1Change(Sender: TObject);
+begin
+
+ if DBRadioGroup1.ItemIndex = 1 then
+ label2.Caption:= 'CNPJ'
+ else
+ Label2.Caption:= 'CPF';
+ mascara;
+   inherited;
+
+
+end;
+
 procedure TFCadCliente.DSStateChange(Sender: TObject);
 begin
-  inherited;
- if RadioGroup1.ItemIndex = 1 then
+   inherited;
+ if DBRadioGroup1.ItemIndex = 1 then
  label2.Caption:= 'CNPJ'
  else
  Label2.Caption:= 'CPF';
@@ -60,12 +76,23 @@ end;
 
 procedure TFCadCliente.FormCreate(Sender: TObject);
 begin
+ DMCadastro:= TDMCadCliente.Create(SELF);
   inherited;
- RadioGroup1.ItemIndex:=0;
+ DBRadioGroup1.ItemIndex:=0;
  Label2.Caption:= 'CPF:';
 
-// DMCadastro:=
+end;
+
+procedure TFCadCliente.mascara;
+begin
+if DBRadioGroup1.itemIndex = 1  then
+ JvDBMaskEdit2.EditMask:='00.000.000/0000-00;1;_'
+ else
+ JvDBMaskEdit2.EditMask:='000.000.000-00;1;'
 
 end;
+
+
+
 
 end.

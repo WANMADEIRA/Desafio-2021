@@ -2,7 +2,7 @@ object Principal: TPrincipal
   Left = 0
   Top = 0
   Caption = 'Desafio Delphi'
-  ClientHeight = 761
+  ClientHeight = 660
   ClientWidth = 1251
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,7 +19,7 @@ object Principal: TPrincipal
     Left = 0
     Top = 0
     Width = 1251
-    Height = 720
+    Height = 619
     Align = alClient
     AutoSize = True
     Picture.Data = {
@@ -2489,15 +2489,16 @@ object Principal: TPrincipal
   end
   object Panel1: TPanel
     Left = 0
-    Top = 720
+    Top = 619
     Width = 1251
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 688
     object Label1: TLabel
       Left = 759
       Top = 14
-      Width = 17
+      Width = 4
       Height = 17
       Color = clBlue
       Font.Charset = DEFAULT_CHARSET

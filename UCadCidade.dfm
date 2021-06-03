@@ -2,7 +2,6 @@ inherited FCadCidade: TFCadCidade
   Caption = 'Cadastro de Cidades'
   ClientHeight = 343
   ClientWidth = 863
-  OnCreate = FormCreate
   ExplicitWidth = 879
   ExplicitHeight = 382
   PixelsPerInch = 96
@@ -106,12 +105,39 @@ inherited FCadCidade: TFCadCidade
       ExplicitTop = 234
     end
   end
-  object ComboBox1: TComboBox [4]
+  object JvComboBox1: TJvComboBox [4]
     Left = 52
-    Top = 233
+    Top = 224
     Width = 145
     Height = 21
     TabOrder = 3
-    Text = 'ComboBox1'
+    Text = 'JvComboBox1'
+    Items.Strings = (
+      'MG'
+      'SP'
+      'RJ'
+      'MT'
+      'ES'
+      'PA'
+      'PR'
+      'AC'
+      'AL'
+      'AP'
+      'AM'
+      'BA'
+      'CE'
+      'DF'
+      'GO'
+      'MA'
+      'MS'
+      'PB'
+      'PE'
+      'PI'
+      'RN'
+      'RS'
+      'RO'
+      'SC'
+      'SE'
+      'TO')
   end
 end

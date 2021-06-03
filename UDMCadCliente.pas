@@ -16,7 +16,7 @@ type
   end;
 
 var
-  DMCadProduto: TDMCadCliente;
+  DMCadCliente: TDMCadCliente;
 
 implementation
 

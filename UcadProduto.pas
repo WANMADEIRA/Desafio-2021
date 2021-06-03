@@ -10,7 +10,6 @@ uses
 
 type
   TFCadProduto = class(TFPaiCadastro)
-    CBOXunidade: TComboBox;
     Label8: TLabel;
     Label1: TLabel;
     Label2: TLabel;
@@ -18,7 +17,7 @@ type
     descricaoproduto: TDBEdit;
     valorvista: TDBEdit;
     valorprazo: TDBEdit;
-    DBGrid1: TDBGrid;
+    DBComboBox1: TDBComboBox;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
