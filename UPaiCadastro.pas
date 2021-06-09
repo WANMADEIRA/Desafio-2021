@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls,
   Vcl.ExtCtrls, Vcl.Imaging.jpeg, JvExExtCtrls, JvExtComponent, JvClock,
   Vcl.Buttons, Vcl.Mask, JvExMask, JvToolEdit, JvBaseEdits, Data.DB,
-  UDMPaiCadastro;
+  UDMPaiCadastro, UCadConsulta;
 
 type
   TFPaiCadastro = class(TForm)
@@ -38,6 +38,8 @@ type
     procedure GravarClick(Sender: TObject);
     procedure CancelarClick(Sender: TObject);
     procedure ExcluirClick(Sender: TObject);
+    procedure EditCodigoKeyPress(Sender: TObject; var Key: Char);
+    procedure EditCodigoButtonClick(Sender: TObject);
   private
 
     { Private declarations }
@@ -73,6 +75,26 @@ begin
   PanelPai.Enabled:= not Editando;
 
 
+end;
+
+procedure TFPaiCadastro.EditCodigoButtonClick(Sender: TObject);
+begin
+ FConsulta:= TFConsulta.Create(SELF);
+  try
+   FConsulta.FclassFilha := DMcadastro.FclassFilha;
+   FConsulta.ShowModal;
+   EditCodigo.AsInteger:= (FConsulta.RetornoConsulta);
+   DMPaiCadastro.AbrirRegistro(EditCodigo.AsInteger);
+   abort
+ finally
+   FreeAndNil(Fconsulta);
+ end;
+end;
+
+procedure TFPaiCadastro.EditCodigoKeyPress(Sender: TObject; var Key: Char);
+begin
+ if  key = #13 then
+ Perform(WM_NEXTDLGCTL, 0 ,0);
 end;
 
 procedure TFPaiCadastro.ExcluirClick(Sender: TObject);

@@ -22,6 +22,10 @@ inherited FCadCliente: TFCadCliente
     ExplicitLeft = 16
     ExplicitTop = 47
     inherited TabSheet1: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 737
+      ExplicitHeight = 349
       object Label1: TLabel
         Left = 25
         Top = 45
@@ -91,6 +95,7 @@ inherited FCadCliente: TFCadCliente
         MaxLength = 14
         TabOrder = 2
         EditMask = '000.000.000-00;1;'
+        OnExit = JvDBMaskEdit2Exit
       end
       object DBRadioGroup1: TDBRadioGroup
         Left = 411
@@ -112,7 +117,7 @@ inherited FCadCliente: TFCadCliente
       ImageIndex = 1
       object Label4: TLabel
         Left = 33
-        Top = 26
+        Top = 17
         Width = 27
         Height = 16
         Caption = 'Rua:'
@@ -125,7 +130,7 @@ inherited FCadCliente: TFCadCliente
       end
       object Label6: TLabel
         Left = 33
-        Top = 106
+        Top = 50
         Width = 39
         Height = 16
         Caption = 'Bairro:'
@@ -138,7 +143,7 @@ inherited FCadCliente: TFCadCliente
       end
       object Label7: TLabel
         Left = 33
-        Top = 272
+        Top = 125
         Width = 50
         Height = 16
         Caption = 'N'#250'mero:'
@@ -149,22 +154,9 @@ inherited FCadCliente: TFCadCliente
         Font.Style = []
         ParentFont = False
       end
-      object Label8: TLabel
-        Left = 225
-        Top = 272
-        Width = 22
-        Height = 16
-        Caption = 'CEP'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        ParentFont = False
-      end
       object Label9: TLabel
         Left = 33
-        Top = 192
+        Top = 89
         Width = 39
         Height = 16
         Caption = 'Cidade'
@@ -176,8 +168,8 @@ inherited FCadCliente: TFCadCliente
         ParentFont = False
       end
       object Label10: TLabel
-        Left = 449
-        Top = 272
+        Left = 236
+        Top = 126
         Width = 38
         Height = 16
         Caption = 'Estado'
@@ -188,55 +180,84 @@ inherited FCadCliente: TFCadCliente
         Font.Style = []
         ParentFont = False
       end
-      object TDBEdit
-        Left = 33
-        Top = 67
+      object rua: TDBEdit
+        Left = 78
+        Top = 16
         Width = 656
         Height = 21
+        DataField = 'rua_end'
+        DataSource = DS
         TabOrder = 0
       end
-      object TDBEdit
-        Left = 33
-        Top = 147
+      object bairro: TDBEdit
+        Left = 78
+        Top = 49
         Width = 656
         Height = 21
+        DataField = 'bairro_end'
         TabOrder = 1
       end
-      object TDBEdit
-        Left = 33
-        Top = 313
+      object num: TDBEdit
+        Left = 89
+        Top = 124
         Width = 141
         Height = 21
+        DataField = 'num_end'
+        DataSource = DS
         TabOrder = 2
       end
-      object TDBEdit
-        Left = 225
-        Top = 313
+      object uf: TDBEdit
+        Left = 280
+        Top = 123
         Width = 141
         Height = 21
         TabOrder = 3
       end
-      object TDBEdit
-        Left = 449
-        Top = 313
-        Width = 141
-        Height = 21
-        TabOrder = 4
-      end
       object JvCalcEdit2: TJvCalcEdit
-        Left = 33
-        Top = 233
+        Left = 78
+        Top = 88
         Width = 656
         Height = 21
         Alignment = taLeftJustify
         ImageKind = ikEllipsis
-        TabOrder = 5
+        TabOrder = 4
         DecimalPlacesAlwaysShown = False
+      end
+      object DBGrid1: TDBGrid
+        Left = 33
+        Top = 148
+        Width = 701
+        Height = 198
+        DataSource = DS
+        TabOrder = 5
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+      object radioendPrincipal: TDBRadioGroup
+        Left = 427
+        Top = 115
+        Width = 307
+        Height = 30
+        Caption = 'Endere'#231'o Principal'
+        Columns = 2
+        DataField = 'padrao_end'
+        DataSource = DS
+        Items.Strings = (
+          'Principal'
+          'Outros')
+        TabOrder = 6
       end
     end
     object TabSheet3: TTabSheet
       Caption = 'Observa'#231#245'es'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label5: TLabel
         Left = 3
         Top = 3
@@ -250,26 +271,31 @@ inherited FCadCliente: TFCadCliente
         Font.Style = []
         ParentFont = False
       end
-      object Mostraobservacoes: TCheckBox
-        Left = 0
-        Top = 321
-        Width = 129
-        Height = 17
-        Caption = 'Mostrar Observa'#231'oes'
-        TabOrder = 0
-      end
-      object mmoObs: TDBMemo
+      object Obs: TDBMemo
         Left = 3
         Top = 25
         Width = 731
         Height = 290
         DataField = 'OBS_CLIENTE'
         DataSource = DS
+        TabOrder = 0
+      end
+      object DBCheckBoxobs: TDBCheckBox
+        Left = 0
+        Top = 321
+        Width = 142
+        Height = 17
+        Caption = 'Mostrar Observa'#231#245'es'
+        DataField = 'EXIBEOBS_CLIENTE'
+        DataSource = DS
         TabOrder = 1
+        ValueChecked = 'S'
+        ValueUnchecked = 'N'
       end
     end
   end
   inherited DS: TDataSource
+    OnUpdateData = DSUpdateData
     Top = 0
   end
 end

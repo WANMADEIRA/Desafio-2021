@@ -3096,6 +3096,8 @@ object FPaiCadastro: TFPaiCadastro
       ImageKind = ikEllipsis
       TabOrder = 0
       DecimalPlacesAlwaysShown = False
+      OnButtonClick = EditCodigoButtonClick
+      OnKeyPress = EditCodigoKeyPress
     end
     object Anterior: TButton
       Left = 811
