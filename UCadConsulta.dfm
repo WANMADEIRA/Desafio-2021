@@ -1,7 +1,11 @@
 object FConsulta: TFConsulta
   Left = 0
   Top = 0
+<<<<<<< HEAD
   Caption = 'Consulta de '
+=======
+  Caption = 'FConsulta'
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
   ClientHeight = 365
   ClientWidth = 661
   Color = clBtnFace
@@ -11,7 +15,10 @@ object FConsulta: TFConsulta
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+<<<<<<< HEAD
   Position = poScreenCenter
+=======
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13

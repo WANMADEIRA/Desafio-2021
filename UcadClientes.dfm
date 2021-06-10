@@ -22,7 +22,11 @@ inherited FCadCliente: TFCadCliente
     ExplicitLeft = 16
     ExplicitTop = 47
     inherited TabSheet1: TTabSheet
+<<<<<<< HEAD
       ExplicitLeft = 8
+=======
+      ExplicitLeft = 4
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
       ExplicitTop = 24
       ExplicitWidth = 737
       ExplicitHeight = 349
@@ -187,7 +191,11 @@ inherited FCadCliente: TFCadCliente
         Width = 656
         Height = 21
         DataField = 'rua_end'
+<<<<<<< HEAD
         DataSource = dsEndereco
+=======
+        DataSource = DS
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
         TabOrder = 0
       end
       object bairro: TDBEdit
@@ -196,7 +204,10 @@ inherited FCadCliente: TFCadCliente
         Width = 656
         Height = 21
         DataField = 'bairro_end'
+<<<<<<< HEAD
         DataSource = dsEndereco
+=======
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
         TabOrder = 1
       end
       object num: TDBEdit
@@ -205,7 +216,11 @@ inherited FCadCliente: TFCadCliente
         Width = 141
         Height = 21
         DataField = 'num_end'
+<<<<<<< HEAD
         DataSource = dsEndereco
+=======
+        DataSource = DS
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
         TabOrder = 2
       end
       object uf: TDBEdit
@@ -230,8 +245,12 @@ inherited FCadCliente: TFCadCliente
         Top = 148
         Width = 701
         Height = 198
+<<<<<<< HEAD
         DataSource = dsEndereco
         ReadOnly = True
+=======
+        DataSource = DS
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
         TabOrder = 5
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -247,7 +266,11 @@ inherited FCadCliente: TFCadCliente
         Caption = 'Endere'#231'o Principal'
         Columns = 2
         DataField = 'padrao_end'
+<<<<<<< HEAD
         DataSource = dsEndereco
+=======
+        DataSource = DS
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
         Items.Strings = (
           'Principal'
           'Outros')
@@ -257,6 +280,10 @@ inherited FCadCliente: TFCadCliente
     object TabSheet3: TTabSheet
       Caption = 'Observa'#231#245'es'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label5: TLabel
         Left = 3
         Top = 3
@@ -278,8 +305,11 @@ inherited FCadCliente: TFCadCliente
         DataField = 'OBS_CLIENTE'
         DataSource = DS
         TabOrder = 0
+<<<<<<< HEAD
         OnClick = ObsClick
         OnExit = ObsExit
+=======
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
       end
       object DBCheckBoxobs: TDBCheckBox
         Left = 0
@@ -296,6 +326,7 @@ inherited FCadCliente: TFCadCliente
     end
   end
   inherited DS: TDataSource
+    OnUpdateData = DSUpdateData
     Top = 0
   end
   object dsEndereco: TDataSource

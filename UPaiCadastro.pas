@@ -40,7 +40,10 @@ type
     procedure ExcluirClick(Sender: TObject);
     procedure EditCodigoKeyPress(Sender: TObject; var Key: Char);
     procedure EditCodigoButtonClick(Sender: TObject);
+<<<<<<< HEAD
    // procedure Sempremaiuscula()
+=======
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
   private
 
     { Private declarations }
@@ -86,7 +89,11 @@ begin
    FConsulta.ShowModal;
    EditCodigo.AsInteger:= (FConsulta.RetornoConsulta);
    DMPaiCadastro.AbrirRegistro(EditCodigo.AsInteger);
+<<<<<<< HEAD
    abort;
+=======
+   abort
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
  finally
    FreeAndNil(Fconsulta);
  end;

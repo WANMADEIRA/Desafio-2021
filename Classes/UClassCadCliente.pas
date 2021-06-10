@@ -70,8 +70,22 @@ begin
            'CLIENTE.TEL_CLIENTE,'                    +#13+
            'CLIENTE.OBS_CLIENTE,'                    +#13+
            'CLIENTE.EXIBEOBS_CLIENTE,'               +#13+
+<<<<<<< HEAD
            'CLIENTE.TIPO_PESSOA'                    +#13+
            'from CLIENTE'                            +#13+
+=======
+           'CLIENTE.TIPO_PESSOA,'                    +#13+
+           'cliente.end_cliente,'                    +#13+
+           'endereco.cod_endereco,'                  +#13+
+           'endereco.cliente_end,'                   +#13+
+           'endereco.bairro_end,'                    +#13+
+           'endereco.rua_end,'                       +#13+
+           'endereco.num_end,'                       +#13+
+           'endereco.cidade_end,'                    +#13+
+           'endereco.padrao_end'                     +#13+
+           'from CLIENTE'                            +#13+
+           'left join endereco on (endereco.cod_endereco = cliente.cod_cliente)' +#13+
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
            'WHERE CLIENTE.COD_CLIENTE=:COD'
 
 

@@ -41,8 +41,12 @@ begin
            'endereco.bairro_end,'         +#13+
            'endereco.cidade_end,'         +#13+
            'endereco.padrao_end'          +#13+
+<<<<<<< HEAD
            'from endereco'                +#13+
            'where endereco.cliente_end = :COD_CLIENTE';
+=======
+           'from endereco';
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
 
 
 

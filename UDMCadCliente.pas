@@ -16,7 +16,10 @@ type
     procedure CDSenderecoAfterOpen(DataSet: TDataSet);
     procedure SQLDSAfterOpen(DataSet: TDataSet);
     procedure CDSCadastroAfterOpen(DataSet: TDataSet);
+<<<<<<< HEAD
     procedure CDSenderecoNewRecord(DataSet: TDataSet);
+=======
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
   private
     { Private declarations }
   public
@@ -35,12 +38,17 @@ implementation
 procedure TDMCadCliente.CDSCadastroAfterOpen(DataSet: TDataSet);
 begin
   inherited;
+<<<<<<< HEAD
   CDSendereco.DataSetField := TDataSetField(CDSCadastro.FieldByName('SQLDSendereco'));
+=======
+ SQLDSendereco.DataSetField:= TDataSetField(CDSCadastro.FieldByName('SQLDSendereco'));
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
 end;
 
 procedure TDMCadCliente.CDSenderecoAfterOpen(DataSet: TDataSet);
 begin
   inherited;
+<<<<<<< HEAD
   TclassCadEndereco.ConfigurarNomesCampos(DataSet.Fields);
 end;
 
@@ -52,6 +60,9 @@ begin
 
   CDSendereco.FieldByName('CLIENTE_END').AsInteger:= CDSCadastro.FieldByName(FclassFilha.CampoChave).AsInteger;
 
+=======
+ TclassCadEndereco.ConfigurarNomesCampos(DataSet.Fields);
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
 end;
 
 procedure TDMCadCliente.DataModuleCreate(Sender: TObject);
@@ -59,6 +70,7 @@ begin
 
   FclassFilha := TClassCadCliente.Create;
   inherited;
+<<<<<<< HEAD
   DSEnderco.DataSet := SQLDS;
   SQLDSendereco.DataSource := DSEnderco;
 
@@ -74,6 +86,16 @@ procedure TDMCadCliente.SQLDSAfterOpen(DataSet: TDataSet);
 begin
   inherited;
   // DataSet.FieldByName('cod_endereco').ProviderFlags:= [];
+=======
+  SQLDSendereco.CommandText:= TclassCadEndereco.SQlCadastro;
+
+end;
+
+procedure TDMCadCliente.SQLDSAfterOpen(DataSet: TDataSet);
+begin
+  inherited;
+  DataSet.FieldByName('cod_endereco').ProviderFlags:= [];
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
 end;
 
 end.

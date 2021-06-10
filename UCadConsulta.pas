@@ -65,13 +65,18 @@ end;
 
 function TFConsulta.MontarSQLConsulta: String;
 var
+<<<<<<< HEAD
   SQL,TESTE, Valor: String;
+=======
+  SQL, Valor: String;
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
   Field: TField;
 begin
  SQL:= FclassFilha.SQlConsulta +#13;
  if edtvalor.Text <> '' then
  begin
    Field:= GETCampoBD;
+<<<<<<< HEAD
    if (Field.DataType = ftInteger) then BEGIN
    Valor:= edtvalor.Text;
    SQL:= SQL + 'where ' + Field.fieldname + ' = ' + Valor
@@ -82,6 +87,14 @@ begin
    TESTE:= sql;
    END;
   // SQL:= SQL + 'where ' + Field.fieldname + ' = ' + Valor;
+=======
+   if (Field.DataType = ftInteger) then
+   Valor:= edtvalor.Text
+   else if (Field.DataType = ftString) then
+   valor:= QuotedStr(edtvalor.Text);
+
+   SQL:= SQL + 'where ' + Field.fieldname + ' = ' + Valor;
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
  end;
  Result := SQL;
 
@@ -100,8 +113,12 @@ end;
 
 procedure TFConsulta.SpeedButton2Click(Sender: TObject);
 begin
+<<<<<<< HEAD
   FretornoConsulta:= CDSPESQUISA.FieldByName(FclassFilha.CampoChave).AsInteger;
   CLose;
+=======
+  FretornoConsulta := CDSPESQUISA.FieldByName(FclassFilha.CampoChave).AsInteger;
+>>>>>>> 03c22fe2b8056bebcbcf543cf5292b603901e33a
 end;
 
 end.
