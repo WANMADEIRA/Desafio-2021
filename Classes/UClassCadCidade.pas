@@ -41,7 +41,10 @@ end;
 
 class function TclassCadCidade.SQlConsulta: String;
 begin
-  //
+   Result:=  'select cidade.cod_cidade,'  +#13 +
+           'cidade.nome_cidade,'        +#13 +
+           'cidade.estado_cidade'       +#13 +
+           'from cidade';
 end;
 
 end.

@@ -38,6 +38,8 @@ inherited FCadCidade: TFCadCidade
     ExplicitWidth = 681
     ExplicitHeight = 281
     inherited TabSheet1: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 673
       ExplicitHeight = 253
       object Unidade: TLabel
@@ -105,13 +107,13 @@ inherited FCadCidade: TFCadCidade
       ExplicitTop = 234
     end
   end
-  object JvComboBox1: TJvComboBox [4]
+  object DBComboBox1: TDBComboBox [4]
     Left = 52
-    Top = 224
+    Top = 236
     Width = 145
     Height = 21
-    TabOrder = 3
-    Text = 'JvComboBox1'
+    DataField = 'ESTADO_CIDADE'
+    DataSource = DS
     Items.Strings = (
       'MG'
       'SP'
@@ -139,5 +141,6 @@ inherited FCadCidade: TFCadCidade
       'SC'
       'SE'
       'TO')
+    TabOrder = 3
   end
 end

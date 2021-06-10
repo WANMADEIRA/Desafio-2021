@@ -1,0 +1,2 @@
+inherited DMCadEndereco: TDMCadEndereco
+end

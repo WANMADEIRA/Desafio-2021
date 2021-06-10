@@ -44,17 +44,23 @@ procedure TDMPaiCadastro.AbrirRegistro(Codigo: Integer);
 begin
  FcodigoAtual:= Codigo;
  CDSCadastro.Close;
- SQLDS.CommandText:= FclassFilha.SQlCadastro;
+ //SQLDS.CommandText:= FclassFilha.SQlCadastro;
+ SQLDS.ParamByName('COD').AsInteger:= Codigo;
  CDSCadastro.FetchParams;
- CDSCadastro.ParamByName('COD').AsInteger:= Codigo;
  CDSCadastro.Open;
-
-
 end;
 
 procedure TDMPaiCadastro.DataModuleCreate(Sender: TObject);
 begin
+
  SQLDS.SQLConnection:= DMConexao.SQLConnection;
+
+ SQLDS.CommandText:= Fclassfilha.SQlCadastro;
+ SQLDS.Params.Clear;
+ SQLDS.Params.CreateParam(ftInteger, 'COD', ptInput);
+
+ DSP.DataSet:= SQLDS;
+ CDSCadastro.ProviderName:= DSP.Name;
  FCodigoAtual:= -1;
 end;
 

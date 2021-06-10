@@ -13,7 +13,7 @@ type
     DBEdit1: TDBEdit;
     Unidade: TLabel;
     Label1: TLabel;
-    JvComboBox1: TJvComboBox;
+    DBComboBox1: TDBComboBox;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

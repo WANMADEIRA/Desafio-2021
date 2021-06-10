@@ -41,7 +41,10 @@ end;
 
 class function TclassCadUnidade.SQlConsulta: String;
 begin
-  //
+   Result:=  'select UNIDADE.COD_UNIDADE,'+#13 +
+           'UNIDADE.NOME_UNIDADE,'        +#13 +
+           'UNIDADE.ABREV_UNIDADE'        +#13 +
+           'from UNIDADE'
 end;
 
 end.

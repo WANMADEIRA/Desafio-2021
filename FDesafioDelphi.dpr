@@ -12,7 +12,6 @@ uses
   UcadProduto in 'UcadProduto.pas' {FCadProduto},
   UcadPedido in 'UcadPedido.pas' {FCadPedidos},
   UCadUnidade in 'UCadUnidade.pas' {FCadUnidade},
-  UCadPesquisa in 'UCadPesquisa.pas' {FConsulta},
   UDMPaiCadastro in 'UDMPaiCadastro.pas' {DMPaiCadastro: TDataModule},
   UClassPaiCadastro in 'Classes\UClassPaiCadastro.pas',
   UClassCadCidade in 'Classes\UClassCadCidade.pas',
@@ -24,7 +23,9 @@ uses
   UDMCadUnidade in 'UDMCadUnidade.pas' {DMCadUnidade: TDataModule},
   UDMCadProduto in 'UDMCadProduto.pas' {DMCadProduto: TDataModule},
   UDMCadCliente in 'UDMCadCliente.pas' {DMCadCliente: TDataModule},
-  UDMCadPedido in 'UDMCadPedido.pas' {DMCadPedido: TDataModule};
+  UDMCadPedido in 'UDMCadPedido.pas' {DMCadPedido: TDataModule},
+  UClassCadEndereco in 'Classes\UClassCadEndereco.pas',
+  UCadConsulta in 'UCadConsulta.pas' {FConsulta};
 
 {$R *.res}
 
@@ -32,7 +33,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Aqua Graphite');
-  Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TDMConexao, DMConexao);
+  Application.CreateForm(TPrincipal, Principal);
   Application.Run;
 end.
